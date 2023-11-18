@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# custom
+src/akkumulator/config.py
+.idea
+xunit-reports
+csv

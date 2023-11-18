@@ -1,0 +1,18 @@
+[Unit]
+Description=iotAkkumulator
+After=syslog.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/iotakkumulator/iotakkumulator
+ExecStart=/home/iotakkumulator/iotakkumulator/.venv/bin/python3 -m akkumulator
+Environment=PYTHONUNBUFFERED=1
+User=iotakkumulator
+Group=iotakkumulator
+
+SyslogIdentifier=iotakkumulator
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
